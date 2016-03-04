@@ -37,7 +37,8 @@ app.service("YelpService", function ($q, $http, $cordovaGeolocation, $ionicPopup
             };
 
 
-            $http.get('https://codecraftpro.com/api/samples/v1/coffee/', {params: params})
+            $http.get('https://codecraftpro.com/api/samples/v1/coffee/',
+              {params: params})
               .success(function (data) {
                 console.log(data);
 
@@ -62,8 +63,10 @@ app.service("YelpService", function ($q, $http, $cordovaGeolocation, $ionicPopup
             console.error(err);
             $ionicPopup.alert({
               'title':'Please switch on geolocation',
-              'template': "It seems like you've switched off geolocation for caffeinehit, please switch it on by going to you application settings."
-            });
+              'template': "It seems like you've switched off geolocation
+              for caffeinehit, please switch it on by going to you
+              application settings."
+          });
           })
       });
 
