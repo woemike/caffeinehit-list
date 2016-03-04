@@ -23,5 +23,6 @@ app.run(function ($ionicPlatform) {
 });
 
 app.config(function ($httpProvider) {
-	$httpProvider.defaults.headers.common['Authorization'] = 'Token c28b812efe6448fb10621cb89bd7f076e328ebb6';
+  //$httpProvider.defaults.headers.common['Authorization'] = 'Token 9f988aecf297aedcb4880d0b0d4b4507e7eb85f2';
+  $httpProvider.defaults.headers.common['Authorization'] = 'Token c28b812efe6448fb10621cb89bd7f076e328ebb6';
 });

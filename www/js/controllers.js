@@ -45,5 +45,6 @@ app.controller("YelpController", function ($scope, YelpService) {
     else
       window.open("maps://maps.apple.com/?q="+lat+","+lon);
   };
+
 });
 
