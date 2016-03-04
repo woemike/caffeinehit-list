@@ -36,13 +36,20 @@ app.controller("YelpController", function ($scope, YelpService) {
   };
 
   $scope.openMap = function (cafe) {
-
+    console.log("Open map");
     var lat = cafe.location.coordinate.latitude;
     var lon = cafe.location.coordinate.longitude;
 
-    if (ionic.Platform.is('android'))
-      window.open("maps://maps.google.com/?q="+lat+","+lon);
-    else
-      window.open("maps://maps.apple.com/?q="+lat+","+lon);
+    // Install cordova inappbrowser!
+
+    if (ionic.Platform.is('android')) {
+      window.open("maps://maps.google.com/?q=" + lat + "," + lon);
+      console.log("Platform is Android");
+    }
+    else {
+      window.open("maps://maps.apple.com/?q=" + lat +"," +lon);
+      console.log("Platform is iOS");
+    }
   };
+
 });
